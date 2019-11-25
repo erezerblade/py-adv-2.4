@@ -18,7 +18,7 @@ def find_cheapest():
 
 
 def find_by_name(name):
-    names = list(collection.find().sort('Цена', 1))
+    names = list(collection.find().sort('Цена', -1))
     res = []
     for i in names:
         if name in i.get('Исполнитель'):
